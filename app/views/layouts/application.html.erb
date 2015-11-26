@@ -3,12 +3,51 @@
 <head>
   <title>Fuitter</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <style>
+      body{
+        background-image: url(/night.jpg);
+        background-repeat: repeat-y;
+        background-position: top center;
+      }
+      .header p , .header p a{
+        color: #e1e1e1;
+      }
+    </style>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
 </head>
 <body>
+  <header class="header">
+      <div class="container">
+                <div class="row">
+                    <div class="col l6 m6 s6">
+                        <ul id="slide-out" class="side-nav">
+                            <li><img src="/images/globe.png" height="40px" width="40px" /></li>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="template.html">Templates</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                        <a href="#" data-activates="slide-out" class="button-collapse"><img src="/images/icons/fuitter_logo.png" class="responsive-img"/></a>
+                    </div>
 
+                    <div class="col l6 m6 s6 ">
+                        <p class="right"><a href="join.html" >Join</a> | <a href="login.html">Login</a></p>
+                    </div>
+                </div>
+      </div>
+    </header>
 <%= yield %>
 
+<script type="text/javascript">
+
+         $(document).ready(function(){
+             $('.button-collapse').sideNav({
+                 menuWidth: 250, // Default is 240
+                 edge: 'left', // Choose the horizontal origin
+                 closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+             });
+           });
+</script>
 </body>
 </html>
