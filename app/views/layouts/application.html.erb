@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Fuitter</title>
+  <title><%= content_for?(:title) ? "Fuitter | #{yield(:title)}" : 'Fuitter' %></title>
+  <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Fuitter" %>">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <style>
       body{
         background-image: url(/night.jpg);
@@ -24,20 +27,23 @@
                     <div class="col l6 m6 s6">
                         <ul id="slide-out" class="side-nav">
                             <li><img src="/images/globe.png" height="40px" width="40px" /></li>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="template.html">Templates</a></li>
-                            <li><a href="contact.html">Contact Us</a></li>
+                            <li> <%= link_to("Home", root_path) %> </li>
+                            <li> <%= link_to("Templates", page_path('templates')) %> </li>
+                            <li> <%= link_to("Contact Us", page_path('contact')) %></li>
                         </ul>
                         <a href="#" data-activates="slide-out" class="button-collapse"><img src="/images/icons/fuitter_logo.png" class="responsive-img"/></a>
                     </div>
 
-                    <div class="col l6 m6 s6 ">
-                        <p class="right"><a href="join.html" >Join</a> | <a href="login.html">Login</a></p>
-                    </div>
                 </div>
       </div>
     </header>
 <%= yield %>
+
+<% unless @hide_footer %>
+<footer class="footer">
+  <p class="center">&copy 2015 Fuitter.com. All rights Reserved. <%= link_to("Privacy Policy", page_path('privacy')) %> | <%= link_to("Terms of Use", page_path('terms')) %></p>
+</footer>
+<% end %>
 
 <script type="text/javascript">
 

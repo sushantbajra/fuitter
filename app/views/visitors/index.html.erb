@@ -1,23 +1,23 @@
 <section class="welcome container center">
-      <h1>Welcome To The Fuitter</h1>
-      <p>Join fuitter.com to get the more adavace services in theses days <br/>
-        It is mostly Beneficoial for photographers, writers , Students Teachers<br/>
-        to share the know about the current world's situation
-      </p>
-      <button class="button  getting-started">Getting Started</button>
-
-      <div class="clearfix"></div>
-
-    </section>
-    <div class="clearfix"></div>
-    <section class=" container">
-      <p class="left privacy-terms white-text">
-                <a href="privacy.html" class="white-text">Privacy Policy</a> |
-        <a href="terms.html" class="white-text">Terms of Use</a>
-      </p>
-      <ul class="right social-icons">
-        <li class="facebook"><a href="#"><i class="fa fa-facebook "></i></a></li>
-        <li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
-        <li class="google-plus"><a href="#"><i class="fa fa-google-plus"></i></a></li>
-      </ul>
-    </section>
+  <h1>Welcome To Fuitter</h1>
+  <p>
+    Establish your business on the world wide web <br/>
+    with the help of Fuitter<br/>
+  </p>
+  <button class="button  getting-started">Login with Facebook</button>
+  <div class="clearfix"></div>
+</section>
+<div class="clearfix"></div>
+<section class=" container">
+  <p class="left privacy-terms white-text">
+    <%= link_to("Privacy Policy", page_path('privacy') , class: 'white-text') %> |
+    <%= link_to("Terms of Use", page_path('terms') , class: 'white-text') %>
+  </p>
+  <ul class="right social-icons">
+    <li class="facebook">
+      <%= link_to "https://www.facebook.com/fuitter", :target => "_blank" do %>
+        <i class="fa fa-facebook "></i>
+      <% end %>
+    </li>
+  </ul>
+</section>
