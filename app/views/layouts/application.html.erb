@@ -22,38 +22,25 @@
 </head>
 <body>
   <header class="header">
-      <div class="container">
-                <div class="row">
-                    <div class="col l6 m6 s6">
-                        <ul id="slide-out" class="side-nav">
-                            <li><img src="/images/globe.png" height="40px" width="40px" /></li>
-                            <li> <%= link_to("Home", root_path) %> </li>
-                            <li> <%= link_to("Templates", page_path('templates')) %> </li>
-                            <li> <%= link_to("Contact Us", page_path('contact')) %></li>
-                        </ul>
-                        <a href="#" data-activates="slide-out" class="button-collapse"><img src="/images/icons/fuitter_logo.png" class="responsive-img"/></a>
-                    </div>
+    <%= render 'layouts/navigation' %>
+  </header>
+  <%= render 'layouts/messages' %>
+  <%= yield %>
 
-                </div>
-      </div>
-    </header>
-<%= yield %>
-
-<% unless @hide_footer %>
-<footer class="footer">
-  <p class="center">&copy 2015 Fuitter.com. All rights Reserved. <%= link_to("Privacy Policy", page_path('privacy')) %> | <%= link_to("Terms of Use", page_path('terms')) %></p>
-</footer>
-<% end %>
+  <% unless @hide_footer %>
+  <footer class="footer">
+    <p class="center">&copy 2015 Fuitter.com. All rights Reserved. <%= link_to("Privacy Policy", page_path('privacy')) %> | <%= link_to("Terms of Use", page_path('terms')) %></p>
+  </footer>
+  <% end %>
 
 <script type="text/javascript">
-
-         $(document).ready(function(){
-             $('.button-collapse').sideNav({
-                 menuWidth: 250, // Default is 240
-                 edge: 'left', // Choose the horizontal origin
-                 closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
-             });
-           });
+$(document).ready(function(){
+   $('.button-collapse').sideNav({
+       menuWidth: 250, // Default is 240
+       edge: 'left', // Choose the horizontal origin
+       closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+   });
+ });
 </script>
 </body>
 </html>

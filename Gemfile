@@ -9,6 +9,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'high_voltage', '~> 2.4.0'
+gem 'dotenv-rails'
 group :development, :test do
   gem 'byebug'
 end
