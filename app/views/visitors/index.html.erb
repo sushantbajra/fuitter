@@ -1,11 +1,22 @@
+<% content_for :header do %>
+    <style>
+      body{
+        background-image: url(/night.jpg);
+        background-repeat: repeat-y;
+        background-position: top center;
+      }
+    </style>
+<% end %>
 <section class="welcome container center">
   <h1>Welcome To Fuitter</h1>
   <p>
     Establish your business on the world wide web <br/>
     with the help of Fuitter<br/>
   </p>
-  <%= link_to signin_path do %>
-    <button class="button  getting-started">Login with Facebook</button>
+  <% unless session[:user_id] %>
+    <%= link_to signin_path do %>
+      <button class="button  getting-started">Login with Facebook</button>
+    <% end %>
   <% end %>
 
   <div class="clearfix"></div>

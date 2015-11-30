@@ -6,12 +6,8 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <%= yield :header %>
   <style>
-      body{
-        background-image: url(/night.jpg);
-        background-repeat: repeat-y;
-        background-position: top center;
-      }
       .header p , .header p a{
         color: #e1e1e1;
       }
@@ -29,7 +25,7 @@
 
   <% unless @hide_footer %>
   <footer class="footer">
-    <p class="center">&copy 2015 Fuitter.com. All rights Reserved. <%= link_to("Privacy Policy", page_path('privacy')) %> | <%= link_to("Terms of Use", page_path('terms')) %></p>
+    <p class="center">&copy <%= Time.now.year %> Fuitter.com. All rights Reserved. <%= link_to("Privacy Policy", page_path('privacy')) %> | <%= link_to("Terms of Use", page_path('terms')) %></p>
   </footer>
   <% end %>
 

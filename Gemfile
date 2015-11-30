@@ -10,6 +10,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'high_voltage', '~> 2.4.0'
 gem 'dotenv-rails'
+gem "koala", "~> 2.2"
 group :development, :test do
   gem 'byebug'
 end
