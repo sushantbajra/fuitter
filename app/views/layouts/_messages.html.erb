@@ -1,0 +1,7 @@
+<% flash.each do |name, msg| %>
+  <% if msg.is_a?(String) %>
+  <script>
+  Materialize.toast('<%= content_tag :div, msg, :id => "flash_#{name}" %>', 3000, 'rounded')
+  </script>
+  <% end %>
+<% end %>

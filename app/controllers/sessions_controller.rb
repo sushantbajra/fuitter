@@ -8,8 +8,9 @@ class SessionsController < ApplicationController
     user = User.where(provider: auth['provider'],
                       uid: auth['uid'].to_s).first || User.create_with_omniauth(auth)
     reset_session
+    session[:access_token] = auth['credentials']['token']
     session[:user_id] = user.id
-    redirect_to root_url, notice: 'Signed in!'
+    redirect_to client_dashboard_url, notice: 'Signed in!'
   end
 
   def destroy
