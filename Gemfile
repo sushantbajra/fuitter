@@ -9,8 +9,10 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'high_voltage', '~> 2.4.0'
 gem 'koala', '~> 2.2'
+gem 'foreman'
+gem 'dotenv-rails'
+
 group :development, :test do
-  gem 'dotenv-rails'
   gem 'byebug'
 end
 group :development do
@@ -22,7 +24,6 @@ gem 'omniauth-facebook'
 gem 'pg'
 gem 'pundit'
 gem 'simple_form'
-gem 'foreman'
 group :development do
   gem 'better_errors'
   gem 'guard-bundler'
