@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Meta -->
+  <meta charset="utf-8">
+  <title>Fuitter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+  <!-- Css -->
+
+
+<%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' %>
+  <script>if ( top !== self ) top.location.replace( self.location.href );// Hey, don't iframe my iframe!</script>
+
+  <%= stylesheet_link_tag 'template.css' %>
+  <%= stylesheet_link_tag '//cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.1/css/font-awesome.css' %>
+  <% stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,300' %>
+<%= javascript_include_tag '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js' %>
+
+  <!--[if lt IE 9]>
+    <script>/*@cc_on'abbr article aside audio canvas details figcaption figure footer header hgroup mark meter nav output progress section summary subline time video'.replace(/\w+/g,function(n){document.createElement(n)})@*/</script>
+  <![endif]-->
+
+</head>
+
+<body>
+<%= yield %>
+
+
+<!-- Javascript -->
+  <%= javascript_include_tag 'switcheroo/products' %>
+  <%= javascript_include_tag 'switcheroo/libs/detectmobilebrowser' %>
+  <%= javascript_include_tag 'switcheroo/libs/jquery.carouFredSel-6.2.1-packed' %>
+  <%= javascript_include_tag 'switcheroo/libs/jquery.mousewheel' %>
+  <%= javascript_include_tag 'switcheroo/application' %>
+
+
+</body>
+
+</html>

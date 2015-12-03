@@ -23,7 +23,9 @@
                         <p>This is the great app It is fully responsive and Professional Design can be found here </p>
                     </div>
                     <div class="card-action">
-                        <a href="#"><button class="view-button">View Template <i class="fa fa-eye"></i></button></a>
+                        <%= link_to client_template_preview_path(page_id: params[:page_id], template_name: 'design1') do %>
+                            <button class="view-button">Preview <i class="fa fa-eye"></i></button>
+                        <% end %>
                     </div>
                 </div>
             </div>
