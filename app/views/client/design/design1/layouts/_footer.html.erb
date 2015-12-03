@@ -1,0 +1,25 @@
+<footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p>Copyright &copy; <%= @info['name'] if @info.has_key?('name') %> <%= Time.now.year %> Developed by Fuitter</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <%= javascript_include_tag 'https://code.jquery.com/jquery-1.11.3.min.js' %>
+    <!-- Bootstrap Core JavaScript -->
+    <%= javascript_include_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js' %>
+
+    <!-- Script to Activate the Carousel -->
+    <script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+    </script>
+
+</body>
+
+</html>

@@ -3,7 +3,7 @@
 <head>
   <title><%= content_for?(:title) ? "Fuitter | #{yield(:title)}" : 'Fuitter' %></title>
   <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Fuitter" %>">
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <%= yield :header %>
@@ -12,7 +12,7 @@
         color: #e1e1e1;
       }
     </style>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application'%>
   <%= csrf_meta_tags %>
 
 </head>

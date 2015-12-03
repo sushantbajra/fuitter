@@ -1,0 +1,2 @@
+module Client::DesignHelper
+end

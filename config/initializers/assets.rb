@@ -9,3 +9,9 @@ Rails.application.config.assets.version = '1.0'
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )
+Rails.application.config.assets.precompile += %w( switcheroo/libs/detectmobilebrowser.js)
+Rails.application.config.assets.precompile += %w( switcheroo/libs/jquery.carouFredSel-6.2.1-packed.js )
+Rails.application.config.assets.precompile += %w( switcheroo/products.js )
+Rails.application.config.assets.precompile += %w( switcheroo/libs/jquery.mousewheel.js )
+Rails.application.config.assets.precompile += %w( template.css )
+Rails.application.config.assets.precompile += %w( design1/business-casual.css )

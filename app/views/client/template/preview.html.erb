@@ -1,0 +1,60 @@
+<!-- Header -->
+<header class="switcher-bar clearfix">
+
+  <!-- Logo -->
+  <div class="logo textual pull-left">
+    <a title="Switcher">
+      Fuitter
+    </a>
+  </div>
+
+  <!-- Bar Remove Button -->
+  <div class="remove-btn header-btn pull-right">
+  <%= link_to("", client_templates_path(params[:page_id]) , :class => "icon-remove") %>
+  </div>
+
+  <!-- Purchase Button -->
+  <div class="remove-btn header-btn pull-right">
+    <%= link_to("", 'sd' , :class => "icon-play") %>
+  </div>
+
+  <!-- Mobile Button -->
+  <div class="mobile-btn header-btn pull-right hidden-xs">
+    <a href="#" title="Smartphone View" class="icon-mobile-phone"></a>
+  </div>
+
+  <!-- Tablet Button -->
+  <div class="tablet-btn header-btn pull-right hidden-xs">
+    <a href="#" title="Tablet View" class="icon-tablet"></a>
+  </div>
+
+  <!-- Desktop Button -->
+  <div class="desktop-btn header-btn pull-right hidden-xs">
+    <a href="#" title="Desktop View" class="icon-desktop"></a>
+  </div>
+
+</header>
+
+<!-- Products List -->
+<section class="switcher-body">
+
+  <a href="#" title="Prev" class="icon-chevron-left products-prev"></a>
+
+  <div class="products-wrapper">
+    <div class="products-list clearfix">
+
+    </div>
+  </div>
+
+  <a href="#" title="Next" class="icon-chevron-right products-next"></a>
+
+</section>
+
+
+<!-- Product iframe -->
+<iframe class="product-iframe" id="frame" frameborder="0" border="0" data-page= <%= params[:page_id] %>></iframe>
+
+<!-- Preloader -->
+<div class="preloader"></div>
+<div class="preloading-icon"><i class="icon-bolt"></i></div>
+
