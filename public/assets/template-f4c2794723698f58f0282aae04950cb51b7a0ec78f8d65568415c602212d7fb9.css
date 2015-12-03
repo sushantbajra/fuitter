@@ -2,6 +2,7 @@
 /* ---------->>> GLOBAL <<<-----------*/
 /* -----------------------------------*/
 
+
 body, h1, h2, h3, h4, h5, h6 {
 	font-family: 'Open Sans', sans-serif;
 }
@@ -126,7 +127,7 @@ body {
 
 .header-btn a:focus,
 .product-switcher a:focus {
-	outline: none;
+	outline: none;	
 }
 
 .product-switcher {
@@ -182,7 +183,7 @@ body {
 .mobile-btn.disabled,
 .tablet-btn.disabled,
 .desktop-btn.disabled {
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
 	opacity: 0;
 	visibility: hidden;
 }
@@ -190,7 +191,7 @@ body {
 .mobile-btn.visible,
 .tablet-btn.visible,
 .desktop-btn.visible {
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"
 	opacity: 1;
 	visibility: visible;
 }
