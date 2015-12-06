@@ -14,10 +14,7 @@ class User < ActiveRecord::Base
     create! do |user|
       user.provider = auth['provider']
       user.uid = auth['uid']
-      if auth['info']
-         user.name = auth['info']['name'] || ""
-      end
+      user.name = auth['info']['name'] || '' if auth['info']
     end
   end
-
 end

@@ -1,8 +1,12 @@
-class Client::TemplateController < Client::BaseController
-  def index
-  end
+module Client
+  class TemplateController < Client::BaseController
+    before_action :valid_template, only: [:preview]
 
-  def preview
-    render layout: 'switcheroo'
+    def index
+    end
+
+    def preview
+      render layout: 'switcheroo'
+    end
   end
 end
