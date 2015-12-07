@@ -5,6 +5,13 @@ Rails.application.routes.draw do
   get '/signout' => 'sessions#destroy', as: 'signout'
   get '/auth/failure' => 'sessions#failure'
 
+  get '/sites/:page_id' => 'site#home', as: 'site_home'
+  get '/sites/:page_id/about' => 'site#about', as: 'site_about'
+  get '/sites/:page_id/contact' => 'site#contact', as: 'site_contact'
+  get '/sites/:page_id/events' => 'site#events', as: 'site_events'
+  get '/sites/:page_id/gallery' => 'site#gallery', as: 'site_gallery'
+  get '/sites/:page_id/news' => 'site#news', as: 'site_news'
+
   namespace :client do
     get 'dashboard' => 'dashboard#index', as: 'dashboard'
     get 'templates/:page_id' => 'template#index', as: 'templates'
