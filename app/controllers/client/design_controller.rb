@@ -1,5 +1,5 @@
 module Client
-  class DesignController < Client::BaseController
+  class DesignController < BaseController
     before_action :data_hash
     layout false
     def home

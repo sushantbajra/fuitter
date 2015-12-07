@@ -1,5 +1,5 @@
 module Client
-  class DashboardController < Client::BaseController
+  class DashboardController < BaseController
     def index
       @pages = @graph_api.get_connection('me', 'accounts')
     end

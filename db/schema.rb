@@ -11,10 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151204113515) do
+ActiveRecord::Schema.define(version: 20151207061556) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "free_accounts", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "sub_domain"
+    t.string   "template"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "account_id"
+  end
+
+  add_index "free_accounts", ["user_id"], name: "index_free_accounts_on_user_id", using: :btree
 
   create_table "templates", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -30,4 +41,5 @@ ActiveRecord::Schema.define(version: 20151204113515) do
     t.integer  "role"
   end
 
+  add_foreign_key "free_accounts", "users"
 end
