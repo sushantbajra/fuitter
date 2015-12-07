@@ -8,5 +8,4 @@ Find a domain <br>
 <% end %>
 
 or<br>
-
-<a href="#">Continue for free</a>
+<%= link_to("Continue For Free", client_create_freeaccount_path(params[:page_id], params[:template_name])) %>

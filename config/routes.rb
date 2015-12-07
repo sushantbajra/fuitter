@@ -18,5 +18,7 @@ Rails.application.routes.draw do
     get 'template/:page_id/:template_name/news' => 'design#news', as: 'design_news'
 
     get 'continue/:page_id/:template_name' => 'continue#index', as: 'continue'
+
+    get 'continue/:page_id/:template_name/create/account/free' => 'freeaccount#save', as: 'create_freeaccount'
   end
 end
