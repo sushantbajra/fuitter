@@ -17,15 +17,19 @@ Rails.application.routes.draw do
     get 'templates/:page_id' => 'template#index', as: 'templates'
     get 'templates/:page_id/preview/:template_name' => 'template#preview', as: 'template_preview'
 
-    get 'template/:page_id/:template_name/home' => 'design#home', as: 'design_home'
-    get 'template/:page_id/:template_name/about' => 'design#about', as: 'design_about'
-    get 'template/:page_id/:template_name/contact' => 'design#contact', as: 'design_contact'
-    get 'template/:page_id/:template_name/events' => 'design#events', as: 'design_events'
-    get 'template/:page_id/:template_name/gallery' => 'design#gallery', as: 'design_gallery'
-    get 'template/:page_id/:template_name/news' => 'design#news', as: 'design_news'
+    # get 'template/:page_id/:template_name/home' => 'design#home', as: 'design_home'
+    # get 'template/:page_id/:template_name/about' => 'design#about', as: 'design_about'
+    # get 'template/:page_id/:template_name/contact' => 'design#contact', as: 'design_contact'
+    # get 'template/:page_id/:template_name/events' => 'design#events', as: 'design_events'
+    # get 'template/:page_id/:template_name/gallery' => 'design#gallery', as: 'design_gallery'
+    # get 'template/:page_id/:template_name/news' => 'design#news', as: 'design_news'
 
     get 'continue/:page_id/:template_name' => 'continue#index', as: 'continue'
 
     get 'continue/:page_id/:template_name/create/account/free' => 'freeaccount#save', as: 'create_freeaccount'
+
+    post 'continue/:page_id/:template_name/domain/check' => 'continue#check', as: 'check_domain'
+
+    get 'continue/:page_id/:template_name/total' => 'checkout#index', as: 'checkout_total'
   end
 end

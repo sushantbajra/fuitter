@@ -8,7 +8,7 @@ $products = {
     "design1" : {
         name     : 'Design 1',
         tag      : 'WP',
-        url      : "http://"+window.location.hostname+"/client/template/"+facebook_page_name+"/design1/home",
+        url      : "http://"+window.location.hostname+"/sites/"+facebook_page_name,
         tooltip  : 'Optional Tooltip for Design 1'
     },
 	visia : {

@@ -11,7 +11,7 @@ gem 'high_voltage', '~> 2.4.0'
 gem 'koala', '~> 2.2'
 gem 'foreman'
 gem 'dotenv-rails'
-
+gem 'whois'
 group :development, :test do
   gem 'byebug'
 end
