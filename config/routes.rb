@@ -16,5 +16,7 @@ Rails.application.routes.draw do
     get 'template/:page_id/:template_name/events' => 'design#events', as: 'design_events'
     get 'template/:page_id/:template_name/gallery' => 'design#gallery', as: 'design_gallery'
     get 'template/:page_id/:template_name/news' => 'design#news', as: 'design_news'
+
+    get 'continue/:page_id/:template_name' => 'continue#index', as: 'continue'
   end
 end

@@ -1,5 +1,6 @@
 module Client
-  class TemplateController < Client::BaseController
+  class TemplateController < BaseController
+    before_action :valid_fb_page
     before_action :valid_template, only: [:preview]
 
     def index

@@ -1,0 +1,12 @@
+<% content_for :title do %>Continue<% end %>
+
+Find a domain <br>
+<%= form_tag("/search", method: "post") do %>
+  www.<%= text_field_tag(:domain) %>
+  <%= select_tag(:city_id, options_for_select([['.com', 'com'], ['.org', 'org']]), class: 'browser-default') %>
+  <%= submit_tag("Check") %>
+<% end %>
+
+or<br>
+
+<a href="#">Continue for free</a>
